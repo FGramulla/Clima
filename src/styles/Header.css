@@ -1,0 +1,125 @@
+/* General Styles for Header */
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed; /* Cambiado de absolute a fixed */
+    top: 0; /* Asegura que esté en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: transparent; /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    border-bottom: 1px solid black;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+  
+  /* Logo and Title */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden; /* Asegura que las letras no salgan del contenedor */
+    text-decoration: none; /* Elimina el subrayado */
+  }
+  
+.title:hover {
+    animation: wind-effect 1s infinite; /* Activa la animación al hacer hover */
+}
+
+@keyframes wind-effect {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    40% {
+        transform: translateX(3px) rotate(1deg);
+    }
+    60% {
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    80% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+  
+  /* Navigation Links */
+  .nav {
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links li{
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li:hover {
+    transform: scale(1.5);
+  }
+
+  .nav-links li a:hover{
+    color: #ffeb3b;
+  }
+  
+  /* Search Bar */
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+  }
+  
+  .search-button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background-color: #ffeb3b;
+    color: #1e90ff;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #ffd700;
+  }
+  
