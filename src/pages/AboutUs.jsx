@@ -27,9 +27,6 @@ const AboutUs = () => {
         que también me inspiró a seguir explorando nuevas ideas y proyectos en el
         mundo del desarrollo web.
       </p>
-      <p>
-        Cabe recalcar que no esta para versión movil de momento.
-      </p>
       <p>Gracias por visitar mi página. ¡Espero que te sea útil y fácil de usar!</p>
     </div>
   );

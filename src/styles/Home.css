@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  padding: 0 10px;
 }
 
 /* Estilos para el video de fondo */
@@ -21,6 +22,7 @@
   filter: brightness(40%);
 }
 
+/* Contenedor de contenido */
 .content {
   position: relative;
   z-index: 1;
@@ -42,14 +44,16 @@
   width: 100%;
   text-align: center;
   z-index: 2;
+  margin-bottom: 20px;
 }
 
-.title {
+.titlehome {
   font-size: 1.8rem;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
+/* Estilos del campo de entrada */
 .input-box {
   position: relative;
   margin-bottom: 20px;
@@ -90,7 +94,6 @@
   cursor: pointer;
   border-bottom: 1px solid #eee;
   transition: all 0.2s ease;
-
 }
 
 .suggestion-item:hover {
@@ -119,6 +122,7 @@
   transform: scale(1);
 }
 
+/* Mensajes de carga y error */
 .loading-text,
 .error-text {
   color: #ffffff;
@@ -134,14 +138,16 @@
   display: flex;
   justify-content: space-around;
   color: rgb(255, 255, 255);
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .weather-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   border: 3px solid rgb(0, 0, 0);
   box-shadow: 20px 40px 8px rgb(0, 0, 0);
   border-radius: 15px;
@@ -199,3 +205,66 @@
   margin: 20px;
   background-color: rgba(0, 0, 0, 0.73);
 }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .weather-box {
+    margin-top: 40%;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .titlehome {
+    font-size: 1.5rem;
+  }
+
+  .city-input {
+    width: 60%;
+  }
+
+  .weather-item {
+    margin-top: 40%;
+    width: 80%;
+    height: auto;
+  }
+
+  .weather-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .details-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    margin-top: 40%;
+  }
+
+  .titlehome {
+    font-size: 1.2rem;
+  }
+
+  .city-input {
+    font-size: 0.9rem;
+  }
+
+  .weather-item .label {
+    font-size: 1.8rem;
+  }
+
+  .value-wind,
+  .value-humidity,
+  .value-weather,
+  .value-temp {
+    font-size: 1.2rem;
+  }
+
+  .details-text {
+    font-size: 1.8rem;
+  }
+}
+

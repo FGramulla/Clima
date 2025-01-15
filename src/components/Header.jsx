@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Importar íconos
 import "../styles/Header.css";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="weather-header">
-      <div className="logo-container">
-        <h1 className="title"><a href="/">Weather Forecast</a></h1>
+      <div className="header-content">
+        {/* Botón del menú hamburguesa */}
+        <button
+          className="hamburger-menu"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <FaTimes /> : <FaBars />} {/* Cambia entre FaBars y FaTimes */}
+        </button>
+
+        {/* Título */}
+        <h1 className="title">
+          <a href="/">Weather Forecast</a>
+        </h1>
       </div>
-      <nav className="nav">
+
+      {/* Navegación */}
+      <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
         <ul className="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/aboutus">About</a></li>
@@ -20,4 +41,7 @@ function Header() {
 }
 
 export default Header;
+
+
+
 

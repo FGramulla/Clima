@@ -98,7 +98,7 @@ function Home() {
       </video>
 
       <div className="weather-box">
-        <h1 className="title">Weather in {city || '...'}</h1>
+        <h1 className="titlehome">Weather in {city || '...'}</h1>
         <div className="input-box">
           <input
             type="text"
